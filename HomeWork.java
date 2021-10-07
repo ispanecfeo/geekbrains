@@ -1,10 +1,16 @@
-package com.company;
+
+
+/*
+   Homework 2
+   @author Авдеев Станислав
+   @version 07.10.2021
+ */
 
 public class HomeWork {
 
     public static void main(String[] args) {
         boolean result = sumWithIn10and20(8, 11);
-        System.out.println("result = " + result);
+        System.out.println("Сумма находится в промежутке от 10..20 включительно = " + result);
         isPositiveOrNegative(-2);
         System.out.println("Число отрицательное - " + isNegative(4));
         printWordNTimes("Hello world", 5);
@@ -18,8 +24,7 @@ public class HomeWork {
     }
 
     public static void isPositiveOrNegative(int x) {
-        String result = (x >= 0) ? "положительное" : "отрицательное";
-        System.out.println("Число " + result);
+        System.out.println((x >= 0) ? "положительное" : "отрицательное");
     }
 
     public static boolean isNegative(int x) {
