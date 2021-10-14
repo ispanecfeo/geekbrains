@@ -1,9 +1,12 @@
 
+/*
+   Homework 4
+   @author Авдеев Станислав
+   @version 15.10.2021
+ */
 
-
-
-import javax.swing.*;
-import java.util.*;
+import java.util.Random;
+import java.util.Scanner;
 
 public class TicTacToe {
 
@@ -129,22 +132,22 @@ public class TicTacToe {
 
     int[] findAdress(char ch) {
 
-       int[] res = null;
-       int[] empty = new int[1];
+        int[] res = null;
+        int[] empty = new int[1];
 
-       res = getAddressX(ch);
-       if (res.length == 2) return res;
+        res = getAddressX(ch);
+        if (res.length == 2) return res;
 
-       res = getAddressY(ch);
-       if (res.length == 2) return res;
+        res = getAddressY(ch);
+        if (res.length == 2) return res;
 
-       res = getAddressDiagonalX(ch);
-       if (res.length == 2) return res;
+        res = getAddressDiagonalX(ch);
+        if (res.length == 2) return res;
 
-       res = getAddressDiagonalY(ch);
-       if (res.length == 2) return res;
+        res = getAddressDiagonalY(ch);
+        if (res.length == 2) return res;
 
-       return empty;
+        return empty;
 
     }
 
@@ -156,10 +159,10 @@ public class TicTacToe {
         int i = 0;
         boolean flag = false;
 
-         while (i < 3 && summa < 2) {
+        while (i < 3 && summa < 2) {
 
             summa = 0;
-             flag = false;
+            flag = false;
 
             if (table[i][0] == ch) {
                 summa++;
@@ -276,8 +279,8 @@ public class TicTacToe {
         if (table[2][0] == ch) {
             summa++;
         } else if (table[2][0] == SIGN_EMPTY) {
-            res[0] = 2;
-            res[1] = 0;
+            res[0] = 0;
+            res[1] = 2;
             flag = true;
         }
 
@@ -292,8 +295,8 @@ public class TicTacToe {
         if (table[0][2] == ch) {
             summa++;
         } else if (table[0][2] == SIGN_EMPTY) {
-            res[0] = 0;
-            res[1] = 2;
+            res[0] = 2;
+            res[1] = 0;
             flag = true;
         }
         return (summa == 2 && flag) ? res : empty;
